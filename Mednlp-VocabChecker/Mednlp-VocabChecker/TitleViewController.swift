@@ -7,3 +7,28 @@
 //
 
 import Foundation
+import UIKit
+
+class TitleViewController: UIViewController {
+    
+    
+    override func viewWillAppear(animated: Bool) {
+        
+    }
+    
+    override func viewDidLoad() {
+        
+        let titleLabel:UILabel = UILabel(frame: CGRect(x: 0, y: 0, width: 100, height: 100));
+        titleLabel.text = "Title"
+        self.view.addSubview(titleLabel)
+        
+        let startButton:UIButton = UIButton(frame: CGRect(x: 0, y: 100, width: 100, height: 100))
+        startButton.setTitle("Start", forState: UIControlState.Highlighted)
+        startButton.addTarget(self, action: "", forControlEvents: UIControlEvents.TouchUpInside)
+        self.view.addSubview(startButton)
+    }
+    
+    func startVocabCheck(){
+        
+    }
+}
