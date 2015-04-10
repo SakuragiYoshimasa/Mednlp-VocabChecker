@@ -34,6 +34,7 @@ class TitleViewController: UIViewController {
     
     func StartVocabCheck(){
         
-            //遷移
+        let vocabCheckViewController:VocabCheckerViewController = VocabCheckerViewController()
+        self.presentViewController(vocabCheckViewController, animated: false, completion: nil)
     }
 }
