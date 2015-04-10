@@ -9,4 +9,24 @@
 import Foundation
 
 
-class VocabCheckModel{}
+class VocabCheckModel:NSObject{
+    
+    private dynamic var ttrInfo:TtrTypeTokenEntity
+    
+    override init(){
+        ttrInfo = TtrTypeTokenEntity()
+    }
+    
+    func initTtrInfo(){
+        ttrInfo = TtrTypeTokenEntity()
+    }
+    
+    func getTtrInfo()->TtrTypeTokenEntity{
+        return ttrInfo
+    }
+    
+    func VocabCheck(input:String){
+        
+    }
+
+}

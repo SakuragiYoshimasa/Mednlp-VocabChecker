@@ -8,14 +8,14 @@
 
 import Foundation
 
-class TtrTypeTokenEntity {
+class TtrTypeTokenEntity :NSObject{
 
     private var ttr:Double
     private var type:Double
     private var token:Double
     
     
-    init(){
+    override init(){
         self.ttr = 0
         self.type = 0
         self.token = 0
