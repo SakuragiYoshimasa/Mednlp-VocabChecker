@@ -48,7 +48,11 @@ class VocabCheckerViewController:UIViewController,UITextFieldDelegate{
         if keyPath == "ttr" {
             //println("change ttr")
             println(ModelManager.getInstance().getVocabCheckModel().getTtrInfo().getTTR())
-            movebox.frame = CGRect(x: 0, y: 100, width: self.view.bounds.width * CGFloat(ModelManager.getInstance().getVocabCheckModel().getTtrInfo().getTTR()), height: 50)
+            
+            UIView.animateWithDuration(5.0, animations:{() -> Void in
+                
+                self.movebox.frame = CGRect(x: 0, y: 100, width: self.view.bounds.width * CGFloat(ModelManager.getInstance().getVocabCheckModel().getTtrInfo().getTTR()), height: 50)
+                }, completion:nil)
         }
     }
     
