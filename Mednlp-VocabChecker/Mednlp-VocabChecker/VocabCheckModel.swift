@@ -26,7 +26,7 @@ class VocabCheckModel:NSObject{
     }
     
     func VocabCheck(input:String){
-        
+        println(input)
     }
 
 }

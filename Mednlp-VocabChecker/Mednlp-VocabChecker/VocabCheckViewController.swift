@@ -9,11 +9,55 @@
 import Foundation
 import UIKit
 
-class VocabCheckerViewController:UIViewController{
+class VocabCheckerViewController:UIViewController,UITextFieldDelegate{
+    
+    var textfield:UITextField!
     
     override func viewDidLoad() {
         
+        self.view.backgroundColor = UIColor.whiteColor()
         
+        textfield = UITextField(frame: CGRect(x: 0, y: 0, width: self.view.bounds.width, height: 200))
+        textfield.backgroundColor = UIColor.redColor()
+        textfield.textColor = UIColor.blackColor()
+        textfield.delegate = self
+        self.view.addSubview(textfield)
+        
+        let tapRecognazer = UITapGestureRecognizer(target: self, action: "onTap:")
+        tapRecognazer.numberOfTapsRequired = 1
+        self.view.addGestureRecognizer(tapRecognazer)
+        
+        
+    }
+    
+    func onTap(recognizer:UIPanGestureRecognizer){
+    
+        textfield.resignFirstResponder()
+    }
+    
+
+    func textFieldDidBeginEditing(textField: UITextField){
+        println("textFieldDidBeginEditing:" + textField.text)
+    }
+    
+
+    func textFieldShouldEndEditing(textField: UITextField) -> Bool {
+        println("textFieldShouldEndEditing:" + textField.text)
+        
+        return true
+    }
+
+    //更新の度
+    func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
+        
+        ModelManager.getInstance().getVocabCheckModel().VocabCheck(textField.text)
+        return true
+    }
+
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        //textField.resignFirstResponder()
+        
+        return true
     }
     
 
