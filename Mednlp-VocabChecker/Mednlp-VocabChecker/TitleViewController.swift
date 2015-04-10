@@ -33,5 +33,6 @@ class TitleViewController: UIViewController {
     
     func StartVocabCheck(){
         
+            //遷移
     }
 }
