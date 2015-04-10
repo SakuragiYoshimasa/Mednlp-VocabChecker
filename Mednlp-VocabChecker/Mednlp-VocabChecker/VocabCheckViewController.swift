@@ -32,40 +32,35 @@ class VocabCheckerViewController:UIViewController,UITextFieldDelegate{
         ModelManager.getInstance().getVocabCheckModel().getTtrInfo().addObserver(self, forKeyPath: "ttr", options:  NSKeyValueObservingOptions.New, context: nil)
         
     }
+    
     override func viewWillDisappear(animated: Bool) {
         super.viewWillDisappear(animated)
         ModelManager.getInstance().getVocabCheckModel().getTtrInfo().removeObserver(self, forKeyPath: "ttrInfo")
-        
     }
     
     override func observeValueForKeyPath(keyPath: String, ofObject object: AnyObject, change: [NSObject : AnyObject], context: UnsafeMutablePointer<Void>) {
         if keyPath == "ttr" {
-            println("change ttr")
+            //println("change ttr")
+            println(ModelManager.getInstance().getVocabCheckModel().getTtrInfo().getTTR())
         }
     }
     
-    func onTap(recognizer:UIPanGestureRecognizer){
-    
-        textfield.resignFirstResponder()
-    }
-    
-
-    func textFieldDidBeginEditing(textField: UITextField){
-        println("textFieldDidBeginEditing:" + textField.text)
-    }
-    
-    func textFieldShouldEndEditing(textField: UITextField) -> Bool {
-        println("textFieldShouldEndEditing:" + textField.text)
-        return true
-    }
-
-    //更新の度
     func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
         
         ModelManager.getInstance().getVocabCheckModel().VocabCheck(textField.text)
         return true
     }
-
+    
+    func onTap(recognizer:UIPanGestureRecognizer){
+        textfield.resignFirstResponder()
+    }
+    func textFieldDidBeginEditing(textField: UITextField){
+        println("textFieldDidBeginEditing:" + textField.text)
+    }
+    func textFieldShouldEndEditing(textField: UITextField) -> Bool {
+        println("textFieldShouldEndEditing:" + textField.text)
+        return true
+    }
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         //textField.resignFirstResponder()
         return true

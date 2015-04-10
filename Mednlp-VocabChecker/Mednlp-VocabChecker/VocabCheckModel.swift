@@ -29,7 +29,27 @@ class VocabCheckModel:NSObject{
         println(input)
         
         
-        ttrInfo.SetTTR(Double(count(input)), token: Double(count(input)))
+        //暫定的なvocabCheck
+        var splited = input.componentsSeparatedByString(" ")
+        println(String(splited.count))
+        var type = 0
+        var flag = 0
+        for i in 0..<splited.count {
+            
+            flag = 0
+            
+            for j in (i+1)..<splited.count {
+                if(splited[i] == splited[j]){
+                    flag++
+                    break
+                }
+            }
+            if(flag == 0){
+                type++
+            }
+        }
+        
+        ttrInfo.SetTTR(Double(type), token: Double(splited.count))
     }
 
 }

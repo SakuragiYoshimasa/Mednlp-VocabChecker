@@ -12,11 +12,6 @@ import UIKit
 class TitleViewController: UIViewController {
     
     
-    override func viewWillAppear(animated: Bool) {
-        
-    }
-    
-    
     override func viewDidLoad() {
         
         self.view.backgroundColor = UIColor.whiteColor()
