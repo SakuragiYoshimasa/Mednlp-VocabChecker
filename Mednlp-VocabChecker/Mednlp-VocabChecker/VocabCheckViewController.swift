@@ -12,6 +12,7 @@ import UIKit
 class VocabCheckerViewController:UIViewController,UITextFieldDelegate{
     
     var textfield:UITextField!
+    var movebox:UILabel!
     
     override func viewDidLoad() {
         
@@ -19,7 +20,7 @@ class VocabCheckerViewController:UIViewController,UITextFieldDelegate{
         
         self.view.backgroundColor = UIColor.whiteColor()
         
-        textfield = UITextField(frame: CGRect(x: 0, y: 0, width: self.view.bounds.width, height: 200))
+        textfield = UITextField(frame: CGRect(x: 0, y: 0, width: self.view.bounds.width, height: 100))
         textfield.backgroundColor = UIColor.redColor()
         textfield.textColor = UIColor.blackColor()
         textfield.delegate = self
@@ -30,6 +31,11 @@ class VocabCheckerViewController:UIViewController,UITextFieldDelegate{
         self.view.addGestureRecognizer(tapRecognazer)
         
         ModelManager.getInstance().getVocabCheckModel().getTtrInfo().addObserver(self, forKeyPath: "ttr", options:  NSKeyValueObservingOptions.New, context: nil)
+        
+        movebox = UILabel(frame: CGRect(x: 0, y: 100, width: self.view.bounds.width, height: 50))
+        movebox.backgroundColor = UIColor.greenColor()
+        movebox.textColor = UIColor.blueColor()
+        self.view.addSubview(movebox)
         
     }
     
@@ -42,6 +48,7 @@ class VocabCheckerViewController:UIViewController,UITextFieldDelegate{
         if keyPath == "ttr" {
             //println("change ttr")
             println(ModelManager.getInstance().getVocabCheckModel().getTtrInfo().getTTR())
+            movebox.frame = CGRect(x: 0, y: 100, width: self.view.bounds.width * CGFloat(ModelManager.getInstance().getVocabCheckModel().getTtrInfo().getTTR()), height: 50)
         }
     }
     
