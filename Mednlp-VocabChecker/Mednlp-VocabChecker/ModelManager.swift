@@ -7,3 +7,10 @@
 //
 
 import Foundation
+
+final class ModelManager{
+    
+    //singleton
+    static let modelManager = ModelManager()
+    private init(){}
+}
