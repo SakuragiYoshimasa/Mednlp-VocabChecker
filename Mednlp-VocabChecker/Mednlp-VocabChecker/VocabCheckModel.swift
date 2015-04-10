@@ -27,6 +27,9 @@ class VocabCheckModel:NSObject{
     
     func VocabCheck(input:String){
         println(input)
+        
+        
+        ttrInfo.SetTTR(Double(count(input)), token: Double(count(input)))
     }
 
 }

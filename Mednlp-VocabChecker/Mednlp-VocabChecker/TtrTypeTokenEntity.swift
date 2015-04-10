@@ -10,7 +10,7 @@ import Foundation
 
 class TtrTypeTokenEntity :NSObject{
 
-    private var ttr:Double
+    private dynamic var ttr:Double
     private var type:Double
     private var token:Double
     

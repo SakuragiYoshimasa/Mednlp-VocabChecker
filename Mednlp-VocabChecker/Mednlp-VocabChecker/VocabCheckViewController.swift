@@ -15,6 +15,8 @@ class VocabCheckerViewController:UIViewController,UITextFieldDelegate{
     
     override func viewDidLoad() {
         
+        super.viewDidLoad()
+        
         self.view.backgroundColor = UIColor.whiteColor()
         
         textfield = UITextField(frame: CGRect(x: 0, y: 0, width: self.view.bounds.width, height: 200))
@@ -27,7 +29,19 @@ class VocabCheckerViewController:UIViewController,UITextFieldDelegate{
         tapRecognazer.numberOfTapsRequired = 1
         self.view.addGestureRecognizer(tapRecognazer)
         
+        ModelManager.getInstance().getVocabCheckModel().getTtrInfo().addObserver(self, forKeyPath: "ttr", options:  NSKeyValueObservingOptions.New, context: nil)
         
+    }
+    override func viewWillDisappear(animated: Bool) {
+        super.viewWillDisappear(animated)
+        ModelManager.getInstance().getVocabCheckModel().getTtrInfo().removeObserver(self, forKeyPath: "ttrInfo")
+        
+    }
+    
+    override func observeValueForKeyPath(keyPath: String, ofObject object: AnyObject, change: [NSObject : AnyObject], context: UnsafeMutablePointer<Void>) {
+        if keyPath == "ttr" {
+            println("change ttr")
+        }
     }
     
     func onTap(recognizer:UIPanGestureRecognizer){
@@ -40,10 +54,8 @@ class VocabCheckerViewController:UIViewController,UITextFieldDelegate{
         println("textFieldDidBeginEditing:" + textField.text)
     }
     
-
     func textFieldShouldEndEditing(textField: UITextField) -> Bool {
         println("textFieldShouldEndEditing:" + textField.text)
-        
         return true
     }
 
@@ -56,9 +68,6 @@ class VocabCheckerViewController:UIViewController,UITextFieldDelegate{
 
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         //textField.resignFirstResponder()
-        
         return true
     }
-    
-
 }
