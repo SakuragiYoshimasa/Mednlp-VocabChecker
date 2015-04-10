@@ -17,9 +17,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         
-       // let titleViewController = TitleViewController()
+        let titleViewController = TitleViewController()
         
-        window?.rootViewController = TitleViewController()
+        window?.rootViewController = titleViewController
+        
         
         
         return true

@@ -14,6 +14,7 @@ class TtrTypeTokenEntity {
     private var type:Double
     private var token:Double
     
+    
     init(){
         self.ttr = 0
         self.type = 0
