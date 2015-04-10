@@ -11,6 +11,20 @@ import Foundation
 final class ModelManager{
     
     //singleton
-    static let modelManager = ModelManager()
+    private static let modelManager = ModelManager()
     private init(){}
+    static func getInstance() -> ModelManager {
+        return modelManager
+    }
+    
+    private let sendDataModel = SendDataModel();
+    func getSendDataModel() -> SendDataModel{
+        return sendDataModel
+    }
+    
+    private let vocabCheckModel = VocabCheckModel();
+    func getVocabCheckModel() -> VocabCheckModel {
+        return vocabCheckModel
+    }
+    
 }

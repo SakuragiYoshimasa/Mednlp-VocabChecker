@@ -11,5 +11,10 @@ import UIKit
 
 class VocabCheckerViewController:UIViewController{
     
+    override func viewDidLoad() {
+        
+        
+    }
+    
 
 }
