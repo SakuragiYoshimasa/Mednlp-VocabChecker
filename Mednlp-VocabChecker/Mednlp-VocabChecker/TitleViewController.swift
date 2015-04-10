@@ -16,6 +16,7 @@ class TitleViewController: UIViewController {
         
     }
     
+    
     override func viewDidLoad() {
         
         self.view.backgroundColor = UIColor.whiteColor()
