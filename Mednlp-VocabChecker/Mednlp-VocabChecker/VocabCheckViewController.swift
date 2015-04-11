@@ -73,7 +73,9 @@ class VocabCheckerViewController:UIViewController,UITextFieldDelegate{
         return true
     }
     func textFieldShouldReturn(textField: UITextField) -> Bool {
-        //textField.resignFirstResponder()
+        textField.resignFirstResponder()
+        let resultViewController:ResultViewController = ResultViewController()
+        self.presentViewController(resultViewController, animated: false, completion: nil)
         return true
     }
 }

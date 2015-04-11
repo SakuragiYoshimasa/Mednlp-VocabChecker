@@ -7,3 +7,12 @@
 //
 
 import Foundation
+import UIKit
+
+class ResultViewController:UIVideoEditorController{
+
+    override func viewDidLoad() {
+        
+    }
+    
+}
