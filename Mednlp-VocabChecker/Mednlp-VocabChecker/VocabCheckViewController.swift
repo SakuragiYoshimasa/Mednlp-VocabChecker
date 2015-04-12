@@ -38,10 +38,9 @@ class VocabCheckerViewController:UIViewController,UITextFieldDelegate{
         self.view.addSubview(movebox)
         
     }
-    
-    override func viewWillDisappear(animated: Bool) {
-        super.viewWillDisappear(animated)
-       // ModelManager.getInstance().getVocabCheckModel().getTtrInfo().removeObserver(self, forKeyPath: "ttrInfo")
+
+    override func viewDidAppear(animated: Bool) {
+        textfield.becomeFirstResponder()
     }
     
     override func observeValueForKeyPath(keyPath: String, ofObject object: AnyObject, change: [NSObject : AnyObject], context: UnsafeMutablePointer<Void>) {
