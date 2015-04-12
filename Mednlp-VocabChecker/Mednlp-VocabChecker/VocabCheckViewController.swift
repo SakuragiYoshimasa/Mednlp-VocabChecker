@@ -49,10 +49,12 @@ class VocabCheckerViewController:UIViewController,UITextFieldDelegate{
             //println("change ttr")
             println(ModelManager.getInstance().getVocabCheckModel().getTtrInfo().getTTR())
             
-            UIView.animateWithDuration(5.0, animations:{() -> Void in
+            UIView.animateWithDuration(1.0, animations:{() -> Void in
                 
-                self.movebox.frame = CGRect(x: 0, y: 100, width: self.view.bounds.width * CGFloat(ModelManager.getInstance().getVocabCheckModel().getTtrInfo().getTTR()), height: 50)
-                }, completion:nil)
+                self.movebox.layer.bounds.size.width = self.view.bounds.width * CGFloat(ModelManager.getInstance().getVocabCheckModel().getTtrInfo().getTTR())
+                },
+                completion:nil
+            )
         }
     }
     
