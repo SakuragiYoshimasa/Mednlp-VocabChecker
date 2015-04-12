@@ -41,7 +41,7 @@ class VocabCheckerViewController:UIViewController,UITextFieldDelegate{
     
     override func viewWillDisappear(animated: Bool) {
         super.viewWillDisappear(animated)
-        ModelManager.getInstance().getVocabCheckModel().getTtrInfo().removeObserver(self, forKeyPath: "ttrInfo")
+       // ModelManager.getInstance().getVocabCheckModel().getTtrInfo().removeObserver(self, forKeyPath: "ttrInfo")
     }
     
     override func observeValueForKeyPath(keyPath: String, ofObject object: AnyObject, change: [NSObject : AnyObject], context: UnsafeMutablePointer<Void>) {
@@ -73,7 +73,7 @@ class VocabCheckerViewController:UIViewController,UITextFieldDelegate{
         return true
     }
     func textFieldShouldReturn(textField: UITextField) -> Bool {
-        textField.resignFirstResponder()
+        //textField.resignFirstResponder()
         let resultViewController:ResultViewController = ResultViewController()
         self.presentViewController(resultViewController, animated: false, completion: nil)
         return true
