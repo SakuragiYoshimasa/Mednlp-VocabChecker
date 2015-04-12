@@ -134,9 +134,9 @@
 		FA0EF20A1AD4C0BF007289E5 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				FA0EF1FC1AD4C007007289E5 /* ResultViewController.swift */,
 				FA0EF1F81AD4BFD9007289E5 /* TitleViewController.swift */,
 				FA0EF1FA1AD4BFF7007289E5 /* VocabCheckViewController.swift */,
+				FA0EF1FC1AD4C007007289E5 /* ResultViewController.swift */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -145,8 +145,8 @@
 			isa = PBXGroup;
 			children = (
 				FA0EF1FE1AD4C017007289E5 /* ModelManager.swift */,
-				FA0EF2021AD4C03E007289E5 /* SendDataModel.swift */,
 				FA0EF2001AD4C029007289E5 /* VocabCheckModel.swift */,
+				FA0EF2021AD4C03E007289E5 /* SendDataModel.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
