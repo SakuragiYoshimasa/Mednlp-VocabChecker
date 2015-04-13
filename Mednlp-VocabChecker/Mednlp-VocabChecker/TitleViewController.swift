@@ -11,7 +11,6 @@ import UIKit
 
 class TitleViewController: UIViewController {
     
-    var voiceInputApi:VoiceInputApi!
     
     override func viewDidLoad() {
         
@@ -21,20 +20,11 @@ class TitleViewController: UIViewController {
         titleLabel.text = "Title"
         self.view.addSubview(titleLabel)
         
-   /*     let startButton:UIButton = UIButton(frame: CGRect(x: 0, y: 100, width: 100, height: 100))
+        let startButton:UIButton = UIButton(frame: CGRect(x: 0, y: 100, width: 100, height: 100))
         startButton.setTitle("Start", forState: UIControlState.Highlighted)
         startButton.addTarget(self, action: "StartVocabCheck", forControlEvents: UIControlEvents.TouchUpInside)
         startButton.backgroundColor = UIColor.blackColor()
-        self.view.addSubview(startButton)*/
-        
-        voiceInputApi = VoiceInputApi()
-        
-        let startButton:UIButton = UIButton(frame: CGRect(x: 0, y: 100, width: 100, height: 100))
-        startButton.setTitle("Start", forState: UIControlState.Highlighted)
-        startButton.addTarget(voiceInputApi, action: "OperateVoiceRecorder", forControlEvents: UIControlEvents.TouchUpInside)
-        startButton.backgroundColor = UIColor.blackColor()
         self.view.addSubview(startButton)
-        
         
     }
     
