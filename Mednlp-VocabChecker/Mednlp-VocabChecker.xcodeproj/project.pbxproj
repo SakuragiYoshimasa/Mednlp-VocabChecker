@@ -21,6 +21,7 @@
 		FA0EF2051AD4C058007289E5 /* MecabApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0EF2041AD4C058007289E5 /* MecabApi.swift */; };
 		FA0EF2071AD4C06F007289E5 /* SendDataApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0EF2061AD4C06F007289E5 /* SendDataApi.swift */; };
 		FA0EF2091AD4C0B5007289E5 /* TtrTypeTokenEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0EF2081AD4C0B5007289E5 /* TtrTypeTokenEntity.swift */; };
+		FA98C5381ADBAECE00EADB06 /* VoiceInputApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA98C5371ADBAECE00EADB06 /* VoiceInputApi.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,7 @@
 		FA0EF2041AD4C058007289E5 /* MecabApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MecabApi.swift; sourceTree = "<group>"; };
 		FA0EF2061AD4C06F007289E5 /* SendDataApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SendDataApi.swift; sourceTree = "<group>"; };
 		FA0EF2081AD4C0B5007289E5 /* TtrTypeTokenEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TtrTypeTokenEntity.swift; sourceTree = "<group>"; };
+		FA98C5371ADBAECE00EADB06 /* VoiceInputApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VoiceInputApi.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +158,7 @@
 			children = (
 				FA0EF2041AD4C058007289E5 /* MecabApi.swift */,
 				FA0EF2061AD4C06F007289E5 /* SendDataApi.swift */,
+				FA98C5371ADBAECE00EADB06 /* VoiceInputApi.swift */,
 			);
 			name = Api;
 			sourceTree = "<group>";
@@ -269,6 +272,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA0EF2071AD4C06F007289E5 /* SendDataApi.swift in Sources */,
+				FA98C5381ADBAECE00EADB06 /* VoiceInputApi.swift in Sources */,
 				FA0EF1FD1AD4C007007289E5 /* ResultViewController.swift in Sources */,
 				FA0EF1FB1AD4BFF7007289E5 /* VocabCheckViewController.swift in Sources */,
 				FA0EF2031AD4C03E007289E5 /* SendDataModel.swift in Sources */,
