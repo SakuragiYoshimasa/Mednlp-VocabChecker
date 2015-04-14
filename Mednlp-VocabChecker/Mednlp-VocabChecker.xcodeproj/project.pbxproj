@@ -7,6 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A4BFA4AB1ADB88AF0063E11E /* mecabrc in Resources */ = {isa = PBXBuildFile; fileRef = A4BFA4AA1ADB88AF0063E11E /* mecabrc */; };
+		A4BFA4B81ADB88E20063E11E /* char.bin in Resources */ = {isa = PBXBuildFile; fileRef = A4BFA4AF1ADB88E20063E11E /* char.bin */; };
+		A4BFA4B91ADB88E20063E11E /* dicrc in Resources */ = {isa = PBXBuildFile; fileRef = A4BFA4B01ADB88E20063E11E /* dicrc */; };
+		A4BFA4BA1ADB88E20063E11E /* left-id.def in Resources */ = {isa = PBXBuildFile; fileRef = A4BFA4B11ADB88E20063E11E /* left-id.def */; };
+		A4BFA4BB1ADB88E20063E11E /* matrix.bin in Resources */ = {isa = PBXBuildFile; fileRef = A4BFA4B21ADB88E20063E11E /* matrix.bin */; };
+		A4BFA4BC1ADB88E20063E11E /* pos-id.def in Resources */ = {isa = PBXBuildFile; fileRef = A4BFA4B31ADB88E20063E11E /* pos-id.def */; };
+		A4BFA4BD1ADB88E20063E11E /* rewrite.def in Resources */ = {isa = PBXBuildFile; fileRef = A4BFA4B41ADB88E20063E11E /* rewrite.def */; };
+		A4BFA4BE1ADB88E20063E11E /* right-id.def in Resources */ = {isa = PBXBuildFile; fileRef = A4BFA4B51ADB88E20063E11E /* right-id.def */; };
+		A4BFA4BF1ADB88E20063E11E /* sys.dic in Resources */ = {isa = PBXBuildFile; fileRef = A4BFA4B61ADB88E20063E11E /* sys.dic */; };
+		A4BFA4C01ADB88E20063E11E /* unk.dic in Resources */ = {isa = PBXBuildFile; fileRef = A4BFA4B71ADB88E20063E11E /* unk.dic */; };
+		A4BFA4CE1ADB89C90063E11E /* Mecab.m in Sources */ = {isa = PBXBuildFile; fileRef = A4BFA4CB1ADB89C90063E11E /* Mecab.m */; };
+		A4BFA4CF1ADB89C90063E11E /* Node.m in Sources */ = {isa = PBXBuildFile; fileRef = A4BFA4CD1ADB89C90063E11E /* Node.m */; };
 		FA0EF1D91AD4BE8D007289E5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0EF1D81AD4BE8D007289E5 /* AppDelegate.swift */; };
 		FA0EF1DB1AD4BE8D007289E5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0EF1DA1AD4BE8D007289E5 /* ViewController.swift */; };
 		FA0EF1DE1AD4BE8D007289E5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA0EF1DC1AD4BE8D007289E5 /* Main.storyboard */; };
@@ -25,6 +37,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		A4BFA4C61ADB89360063E11E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A4BFA4C21ADB89360063E11E /* mecab.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D2AAC07E0554694100DB518D;
+			remoteInfo = mecab;
+		};
 		FA0EF1E91AD4BE8D007289E5 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = FA0EF1CB1AD4BE8D007289E5 /* Project object */;
@@ -35,6 +54,22 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A4BFA4AA1ADB88AF0063E11E /* mecabrc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = mecabrc; sourceTree = "<group>"; };
+		A4BFA4AF1ADB88E20063E11E /* char.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = char.bin; sourceTree = "<group>"; };
+		A4BFA4B01ADB88E20063E11E /* dicrc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dicrc; sourceTree = "<group>"; };
+		A4BFA4B11ADB88E20063E11E /* left-id.def */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "left-id.def"; sourceTree = "<group>"; };
+		A4BFA4B21ADB88E20063E11E /* matrix.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = matrix.bin; sourceTree = "<group>"; };
+		A4BFA4B31ADB88E20063E11E /* pos-id.def */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "pos-id.def"; sourceTree = "<group>"; };
+		A4BFA4B41ADB88E20063E11E /* rewrite.def */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = rewrite.def; sourceTree = "<group>"; };
+		A4BFA4B51ADB88E20063E11E /* right-id.def */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "right-id.def"; sourceTree = "<group>"; };
+		A4BFA4B61ADB88E20063E11E /* sys.dic */ = {isa = PBXFileReference; lastKnownFileType = file; path = sys.dic; sourceTree = "<group>"; };
+		A4BFA4B71ADB88E20063E11E /* unk.dic */ = {isa = PBXFileReference; lastKnownFileType = file; path = unk.dic; sourceTree = "<group>"; };
+		A4BFA4C21ADB89360063E11E /* mecab.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = mecab.xcodeproj; path = ../../mecab/mecab.xcodeproj; sourceTree = "<group>"; };
+		A4BFA4C91ADB89C80063E11E /* Mednlp-VocabChecker-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Mednlp-VocabChecker-Bridging-Header.h"; sourceTree = "<group>"; };
+		A4BFA4CA1ADB89C90063E11E /* Mecab.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mecab.h; sourceTree = "<group>"; };
+		A4BFA4CB1ADB89C90063E11E /* Mecab.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Mecab.m; sourceTree = "<group>"; };
+		A4BFA4CC1ADB89C90063E11E /* Node.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Node.h; sourceTree = "<group>"; };
+		A4BFA4CD1ADB89C90063E11E /* Node.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Node.m; sourceTree = "<group>"; };
 		FA0EF1D31AD4BE8D007289E5 /* Mednlp-VocabChecker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mednlp-VocabChecker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA0EF1D71AD4BE8D007289E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA0EF1D81AD4BE8D007289E5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -74,6 +109,60 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A4BFA4A91ADB88960063E11E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A4BFA4AE1ADB88D00063E11E /* ipadic */,
+				A4BFA4AA1ADB88AF0063E11E /* mecabrc */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		A4BFA4AE1ADB88D00063E11E /* ipadic */ = {
+			isa = PBXGroup;
+			children = (
+				A4BFA4AF1ADB88E20063E11E /* char.bin */,
+				A4BFA4B01ADB88E20063E11E /* dicrc */,
+				A4BFA4B11ADB88E20063E11E /* left-id.def */,
+				A4BFA4B21ADB88E20063E11E /* matrix.bin */,
+				A4BFA4B31ADB88E20063E11E /* pos-id.def */,
+				A4BFA4B41ADB88E20063E11E /* rewrite.def */,
+				A4BFA4B51ADB88E20063E11E /* right-id.def */,
+				A4BFA4B61ADB88E20063E11E /* sys.dic */,
+				A4BFA4B71ADB88E20063E11E /* unk.dic */,
+			);
+			name = ipadic;
+			sourceTree = "<group>";
+		};
+		A4BFA4C11ADB88FD0063E11E /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				A4BFA4C81ADB894C0063E11E /* Mecab */,
+				A4BFA4C21ADB89360063E11E /* mecab.xcodeproj */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		A4BFA4C31ADB89360063E11E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A4BFA4C71ADB89360063E11E /* libmecab.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A4BFA4C81ADB894C0063E11E /* Mecab */ = {
+			isa = PBXGroup;
+			children = (
+				A4BFA4CA1ADB89C90063E11E /* Mecab.h */,
+				A4BFA4CB1ADB89C90063E11E /* Mecab.m */,
+				A4BFA4CC1ADB89C90063E11E /* Node.h */,
+				A4BFA4CD1ADB89C90063E11E /* Node.m */,
+				A4BFA4C91ADB89C80063E11E /* Mednlp-VocabChecker-Bridging-Header.h */,
+			);
+			name = Mecab;
+			sourceTree = "<group>";
+		};
 		FA0EF1CA1AD4BE8D007289E5 = {
 			isa = PBXGroup;
 			children = (
@@ -95,6 +184,8 @@
 		FA0EF1D51AD4BE8D007289E5 /* Mednlp-VocabChecker */ = {
 			isa = PBXGroup;
 			children = (
+				A4BFA4C11ADB88FD0063E11E /* Other Sources */,
+				A4BFA4A91ADB88960063E11E /* Resources */,
 				FA0EF1D81AD4BE8D007289E5 /* AppDelegate.swift */,
 				FA0EF20B1AD4C0DB007289E5 /* Model */,
 				FA0EF20A1AD4C0BF007289E5 /* ViewController */,
@@ -238,6 +329,12 @@
 			mainGroup = FA0EF1CA1AD4BE8D007289E5;
 			productRefGroup = FA0EF1D41AD4BE8D007289E5 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = A4BFA4C31ADB89360063E11E /* Products */;
+					ProjectRef = A4BFA4C21ADB89360063E11E /* mecab.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				FA0EF1D21AD4BE8D007289E5 /* Mednlp-VocabChecker */,
@@ -246,13 +343,33 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXReferenceProxy section */
+		A4BFA4C71ADB89360063E11E /* libmecab.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libmecab.a;
+			remoteRef = A4BFA4C61ADB89360063E11E /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
 /* Begin PBXResourcesBuildPhase section */
 		FA0EF1D11AD4BE8D007289E5 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A4BFA4BF1ADB88E20063E11E /* sys.dic in Resources */,
+				A4BFA4B91ADB88E20063E11E /* dicrc in Resources */,
+				A4BFA4C01ADB88E20063E11E /* unk.dic in Resources */,
+				A4BFA4BC1ADB88E20063E11E /* pos-id.def in Resources */,
+				A4BFA4BE1ADB88E20063E11E /* right-id.def in Resources */,
+				A4BFA4AB1ADB88AF0063E11E /* mecabrc in Resources */,
 				FA0EF1DE1AD4BE8D007289E5 /* Main.storyboard in Resources */,
+				A4BFA4BD1ADB88E20063E11E /* rewrite.def in Resources */,
 				FA0EF1E31AD4BE8D007289E5 /* LaunchScreen.xib in Resources */,
+				A4BFA4B81ADB88E20063E11E /* char.bin in Resources */,
+				A4BFA4BA1ADB88E20063E11E /* left-id.def in Resources */,
+				A4BFA4BB1ADB88E20063E11E /* matrix.bin in Resources */,
 				FA0EF1E01AD4BE8D007289E5 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -271,12 +388,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A4BFA4CF1ADB89C90063E11E /* Node.m in Sources */,
 				FA0EF2071AD4C06F007289E5 /* SendDataApi.swift in Sources */,
 				FA0EF1FD1AD4C007007289E5 /* ResultViewController.swift in Sources */,
 				FA0EF1DB1AD4BE8D007289E5 /* ViewController.swift in Sources */,
 				FA0EF1FB1AD4BFF7007289E5 /* VocabCheckViewController.swift in Sources */,
 				FA0EF2031AD4C03E007289E5 /* SendDataModel.swift in Sources */,
 				FA0EF1D91AD4BE8D007289E5 /* AppDelegate.swift in Sources */,
+				A4BFA4CE1ADB89C90063E11E /* Mecab.m in Sources */,
 				FA0EF2051AD4C058007289E5 /* MecabApi.swift in Sources */,
 				FA0EF1F91AD4BFD9007289E5 /* TitleViewController.swift in Sources */,
 				FA0EF1FF1AD4C017007289E5 /* ModelManager.swift in Sources */,
@@ -404,9 +523,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "Mednlp-VocabChecker/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Mednlp-VocabChecker/Mednlp-VocabChecker-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -414,9 +536,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "Mednlp-VocabChecker/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Mednlp-VocabChecker/Mednlp-VocabChecker-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -473,6 +597,7 @@
 				FA0EF1F41AD4BE8D007289E5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FA0EF1F51AD4BE8D007289E5 /* Build configuration list for PBXNativeTarget "Mednlp-VocabCheckerTests" */ = {
 			isa = XCConfigurationList;
@@ -481,6 +606,7 @@
 				FA0EF1F71AD4BE8D007289E5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
