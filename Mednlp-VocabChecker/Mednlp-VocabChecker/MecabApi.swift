@@ -20,7 +20,7 @@ import Foundation
 class TypeToken {
 
     
-    static func setString(testString :String!)->[Int]{
+    static func getTypeToken(testString :String!)->[Int]{
         
         
         let tagger = NSLinguisticTagger(tagSchemes: NSLinguisticTagger.availableTagSchemesForLanguage("ja"),options: 0)

@@ -27,6 +27,8 @@ class VocabCheckModel:NSObject{
     
     func VocabCheck(input:String){
         println(input)
+    
+        var typetoken:[Int] = TypeToken.getTypeToken(input);
         
         
         //暫定的なvocabCheck
@@ -49,7 +51,8 @@ class VocabCheckModel:NSObject{
             }
         }
         
-        ttrInfo.SetTTR(Double(type), token: Double(splited.count))
+        //ttrInfo.SetTTR(Double(type), token: Double(splited.count))
+        ttrInfo.SetTTR(Double(typetoken[0]), token: Double(typetoken[1]))
     }
 
 }
