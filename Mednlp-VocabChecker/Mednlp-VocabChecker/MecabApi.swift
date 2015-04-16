@@ -18,13 +18,15 @@ import Foundation
 
 
 class TypeToken {
+
     
-    private let tagger = NSLinguisticTagger(tagSchemes: NSLinguisticTagger.availableTagSchemesForLanguage("ja"),options: 0)
-    
-    private var token: Int!
-    private var type: Int!
-    
-    func setString(testString :String!){
+    static func setString(testString :String!)->[Int]{
+        
+        
+        let tagger = NSLinguisticTagger(tagSchemes: NSLinguisticTagger.availableTagSchemesForLanguage("ja"),options: 0)
+        
+        //var token: Int!
+        //var type: Int!
         var types: [String]=[""]
         var tokens:Int = 0
         let options: NSLinguisticTaggerOptions = .OmitWhitespace | .OmitPunctuation | .JoinNames
@@ -37,13 +39,16 @@ class TypeToken {
                 types.append(tokencell)
             }
         }
-        self.token=types.count
-        self.token=tokens
+        //token=types.count
+        //token=tokens
+    
+        return [types.count,tokens]
+    
     }
-    func getType()->Int{
+   /* func getType()->Int{
         return self.type
     }
     func getToken()->Int{
         return self.token
-    }
+    }*/
 }
