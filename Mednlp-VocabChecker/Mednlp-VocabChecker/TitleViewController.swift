@@ -12,10 +12,6 @@ import UIKit
 class TitleViewController: UIViewController {
     
     
-    override func viewWillAppear(animated: Bool) {
-        
-    }
-    
     override func viewDidLoad() {
         
         self.view.backgroundColor = UIColor.whiteColor()
@@ -29,10 +25,12 @@ class TitleViewController: UIViewController {
         startButton.addTarget(self, action: "StartVocabCheck", forControlEvents: UIControlEvents.TouchUpInside)
         startButton.backgroundColor = UIColor.blackColor()
         self.view.addSubview(startButton)
+        
     }
     
     func StartVocabCheck(){
         
-            //遷移
+        let vocabCheckViewController:VocabCheckerViewController = VocabCheckerViewController()
+        self.presentViewController(vocabCheckViewController, animated: false, completion: nil)
     }
 }
