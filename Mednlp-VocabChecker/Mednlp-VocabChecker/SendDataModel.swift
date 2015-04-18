@@ -8,4 +8,11 @@
 
 import Foundation
 
-class SendDataModel{}
+class SendDataModel:NSObject{
+
+    private var input:String = ""
+    
+    override init() {
+        input = ""
+    }
+};

@@ -25,8 +25,7 @@ class TypeToken {
         
         let tagger = NSLinguisticTagger(tagSchemes: NSLinguisticTagger.availableTagSchemesForLanguage("ja"),options: 0)
         
-        //var token: Int!
-        //var type: Int!
+
         var types: [String]=[""]
         var tokens:Int = 0
         let options: NSLinguisticTaggerOptions = .OmitWhitespace | .OmitPunctuation | .JoinNames
@@ -39,18 +38,11 @@ class TypeToken {
                 types.append(tokencell)
             }
         }
-        //token=types.count
-        //token=tokens
     
         return [types.count,tokens]
     
     }
-   /* func getType()->Int{
-        return self.type
-    }
-    func getToken()->Int{
-        return self.token
-    }*/
+
     
     
     //暫定的なvocabCheck
