@@ -18,7 +18,7 @@
 		FA0EF1FF1AD4C017007289E5 /* ModelManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0EF1FE1AD4C017007289E5 /* ModelManager.swift */; };
 		FA0EF2011AD4C029007289E5 /* VocabCheckModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0EF2001AD4C029007289E5 /* VocabCheckModel.swift */; };
 		FA0EF2031AD4C03E007289E5 /* SendDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0EF2021AD4C03E007289E5 /* SendDataModel.swift */; };
-		FA0EF2051AD4C058007289E5 /* MecabApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0EF2041AD4C058007289E5 /* MecabApi.swift */; };
+		FA0EF2051AD4C058007289E5 /* TypeTokenApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0EF2041AD4C058007289E5 /* TypeTokenApi.swift */; };
 		FA0EF2071AD4C06F007289E5 /* SendDataApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0EF2061AD4C06F007289E5 /* SendDataApi.swift */; };
 		FA0EF2091AD4C0B5007289E5 /* TtrTypeTokenEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0EF2081AD4C0B5007289E5 /* TtrTypeTokenEntity.swift */; };
 		FA98C5381ADBAECE00EADB06 /* VoiceInputApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA98C5371ADBAECE00EADB06 /* VoiceInputApi.swift */; };
@@ -50,7 +50,7 @@
 		FA0EF1FE1AD4C017007289E5 /* ModelManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelManager.swift; sourceTree = "<group>"; };
 		FA0EF2001AD4C029007289E5 /* VocabCheckModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VocabCheckModel.swift; sourceTree = "<group>"; };
 		FA0EF2021AD4C03E007289E5 /* SendDataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SendDataModel.swift; sourceTree = "<group>"; };
-		FA0EF2041AD4C058007289E5 /* MecabApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MecabApi.swift; sourceTree = "<group>"; };
+		FA0EF2041AD4C058007289E5 /* TypeTokenApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TypeTokenApi.swift; sourceTree = "<group>"; };
 		FA0EF2061AD4C06F007289E5 /* SendDataApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SendDataApi.swift; sourceTree = "<group>"; };
 		FA0EF2081AD4C0B5007289E5 /* TtrTypeTokenEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TtrTypeTokenEntity.swift; sourceTree = "<group>"; };
 		FA98C5371ADBAECE00EADB06 /* VoiceInputApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VoiceInputApi.swift; sourceTree = "<group>"; };
@@ -156,7 +156,7 @@
 		FA0EF20C1AD4C0ED007289E5 /* Api */ = {
 			isa = PBXGroup;
 			children = (
-				FA0EF2041AD4C058007289E5 /* MecabApi.swift */,
+				FA0EF2041AD4C058007289E5 /* TypeTokenApi.swift */,
 				FA0EF2061AD4C06F007289E5 /* SendDataApi.swift */,
 				FA98C5371ADBAECE00EADB06 /* VoiceInputApi.swift */,
 			);
@@ -277,7 +277,7 @@
 				FA0EF1FB1AD4BFF7007289E5 /* VocabCheckViewController.swift in Sources */,
 				FA0EF2031AD4C03E007289E5 /* SendDataModel.swift in Sources */,
 				FA0EF1D91AD4BE8D007289E5 /* AppDelegate.swift in Sources */,
-				FA0EF2051AD4C058007289E5 /* MecabApi.swift in Sources */,
+				FA0EF2051AD4C058007289E5 /* TypeTokenApi.swift in Sources */,
 				FA0EF1F91AD4BFD9007289E5 /* TitleViewController.swift in Sources */,
 				FA0EF1FF1AD4C017007289E5 /* ModelManager.swift in Sources */,
 				FA0EF2091AD4C0B5007289E5 /* TtrTypeTokenEntity.swift in Sources */,
