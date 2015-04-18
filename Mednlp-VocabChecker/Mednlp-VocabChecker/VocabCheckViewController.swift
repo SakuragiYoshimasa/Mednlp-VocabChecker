@@ -32,7 +32,7 @@ class VocabCheckerViewController:UIViewController,UITextFieldDelegate{
         
         ModelManager.getInstance().getVocabCheckModel().getTtrInfo().addObserver(self, forKeyPath: "ttr", options:  NSKeyValueObservingOptions.New, context: nil)
         
-        movebox = UILabel(frame: CGRect(x: 0, y: 100, width: self.view.bounds.width, height: 50))
+        movebox = UILabel(frame: CGRect(x: 0, y: self.view.bounds.height , width: self.view.bounds.width, height: 50))
         movebox.backgroundColor = UIColor.greenColor()
         movebox.textColor = UIColor.blueColor()
         self.view.addSubview(movebox)
@@ -48,9 +48,13 @@ class VocabCheckerViewController:UIViewController,UITextFieldDelegate{
             //println("change ttr")
             println(ModelManager.getInstance().getVocabCheckModel().getTtrInfo().getTTR())
             
+            let angle:CGFloat = CGFloat(ModelManager.getInstance().getVocabCheckModel().getTtrInfo().getTTR() * M_PI)
+            
             UIView.animateWithDuration(1.0, animations:{() -> Void in
                 
-                self.movebox.layer.bounds.size.width = self.view.bounds.width * CGFloat(ModelManager.getInstance().getVocabCheckModel().getTtrInfo().getTTR())
+                /*self.movebox.layer.bounds.size.width = self.view.bounds.width * CGFloat(ModelManager.getInstance().getVocabCheckModel().getTtrInfo().getTTR())
+                },*/
+                self.movebox.transform = CGAffineTransformMakeRotation(angle)
                 },
                 completion:nil
             )
