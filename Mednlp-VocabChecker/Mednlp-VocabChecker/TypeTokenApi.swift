@@ -39,7 +39,7 @@ class TypeToken {
             }
         }
     
-        return [types.count,tokens]
+        return [types.count - 1,tokens]
     
     }
 
