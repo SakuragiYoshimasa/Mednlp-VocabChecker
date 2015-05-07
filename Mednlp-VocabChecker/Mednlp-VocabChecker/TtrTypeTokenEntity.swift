@@ -33,9 +33,24 @@ class TtrTypeTokenEntity :NSObject{
     
     }
     
+    func getTTRResult() -> String {
+        if ttr > 0.9 {
+            return "素晴らしい語彙力です"
+        }else if ttr > 0.6 {
+            return "平均的です"
+        }else{
+            return "語彙不足の傾向があります"
+        }
+    }
+    
     func getTTR() -> Double {
         
         return ttr
+        
+    }
+    func getTTRNormalized() -> NSString {
+        
+        return NSString(format: "%.2f", ttr)
         
     }
     

@@ -14,6 +14,7 @@ class VocabCheckerViewController:UIViewController,UITextViewDelegate{
     var textview:UITextView!
     var movebox:UILabel!
     var handImageView:UIImageView!
+    var statusLabel: UILabel!
     
     var centerX: CGFloat!
     var centerY: CGFloat!
@@ -28,6 +29,7 @@ class VocabCheckerViewController:UIViewController,UITextViewDelegate{
         //backgroundImageView.image = UIImage(named: "main.png")
         //self.view.addSubview(backgroundImageView)
         
+        //これいるか？
         let tapRecognazer = UITapGestureRecognizer(target: self, action: "onTap:")
         tapRecognazer.numberOfTapsRequired = 1
         self.view.addGestureRecognizer(tapRecognazer)
@@ -35,7 +37,7 @@ class VocabCheckerViewController:UIViewController,UITextViewDelegate{
         ModelManager.getInstance().getVocabCheckModel().getTtrInfo().addObserver(self, forKeyPath: "ttr", options:  NSKeyValueObservingOptions.New, context: nil)
         
         
-        //目盛りを作成
+        //目盛を作成
         let graduationImageView: UIImageView! = UIImageView(frame: CGRectMake(0, 0, self.view.bounds.width, self.view.bounds.height))
         
         UIGraphicsBeginImageContextWithOptions(CGSizeMake(self.view.bounds.width, self.view.bounds.height), false, 1.0)
@@ -58,18 +60,19 @@ class VocabCheckerViewController:UIViewController,UITextViewDelegate{
         }
         
         CGContextSetLineWidth(context, 1.0);   // 線の太さ
-        for j in 0...6 {
-            let i = j-(6-6)/2
+        for i in 0...6 {
             CGContextMoveToPoint(context,centerX + radiusS*cos(CGFloat(M_PI/6 + M_PI / 9 * Double(i))), centerY - radiusS*sin(CGFloat(M_PI/6 + M_PI / 9 * Double(i))))
             CGContextAddLineToPoint(context,centerX + radiusL*cos(CGFloat(M_PI/6 + M_PI / 9 * Double(i))), centerY - radiusL*sin(CGFloat(M_PI/6 + M_PI / 9 * Double(i))))
             CGContextStrokePath(context);  // 描画
+            
+            
         }
         let graduationImage = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
         graduationImageView.image=graduationImage
         self.view.addSubview(graduationImageView)
         
-        //針を描画
+        //針を作成
         self.handImageView = UIImageView(frame: CGRectMake(0, 0, 6,radiusL*2))
         UIGraphicsBeginImageContextWithOptions(CGSizeMake(6,radiusL*2), false, 0)//描画開始
         let path_triangle = UIBezierPath()
@@ -90,10 +93,18 @@ class VocabCheckerViewController:UIViewController,UITextViewDelegate{
         self.handImageView.transform = CGAffineTransformMakeRotation(angle)
         self.view.addSubview(self.handImageView)
         
+        self.statusLabel = UILabel(frame: CGRectMake(0,0,self.view.bounds.width/2,100))
+        //self.statusLabel.backgroundColor = UIColor.grayColor()
+        self.statusLabel.textAlignment = NSTextAlignment.Center
+        self.statusLabel.text="Type/Token=\(ModelManager.getInstance().getVocabCheckModel().getTtrInfo().getTTRNormalized())\nType=\(ModelManager.getInstance().getVocabCheckModel().getTtrInfo().getTYPE())\nToken=\(ModelManager.getInstance().getVocabCheckModel().getTtrInfo().getTOKEN())"
+        self.statusLabel.layer.position=CGPointMake(self.centerX, self.centerY-50)
+        self.statusLabel.numberOfLines = 3
+        self.view.addSubview(self.statusLabel)
         
-        textview = UITextView(frame: CGRect(x: 0, y: self.view.bounds.height/2, width: self.view.bounds.width, height: 40))
-        textview.layer.position=CGPoint(x:self.view.bounds.width/2, y:self.view.bounds.height/2)
-        textview.backgroundColor = ConstShared.keyColor
+        
+        textview = UITextView(frame: CGRect(x: 0, y: self.centerY, width: self.view.bounds.width, height: 50))
+        //textview.layer.position=CGPoint(x:self.view.bounds.width/2, y:self.view.bounds.height/2)
+        textview.backgroundColor = UIColor.clearColor()
         textview.textColor = UIColor.blackColor()
         textview.delegate = self
         textview.returnKeyType = UIReturnKeyType.Done
@@ -110,6 +121,7 @@ class VocabCheckerViewController:UIViewController,UITextViewDelegate{
         if keyPath == "ttr" {
             //println("change ttr")
             println(ModelManager.getInstance().getVocabCheckModel().getTtrInfo().getTTR())
+            self.statusLabel.text="Type/Token=\(ModelManager.getInstance().getVocabCheckModel().getTtrInfo().getTTRNormalized())\nType=\(ModelManager.getInstance().getVocabCheckModel().getTtrInfo().getTYPE())\nToken=\(ModelManager.getInstance().getVocabCheckModel().getTtrInfo().getTOKEN())"
             
             let angle:CGFloat = CGFloat((ModelManager.getInstance().getVocabCheckModel().getTtrInfo().getTTR() - 0.25) * M_PI * 10 / 9 - M_PI_2)
             UIView.animateWithDuration(1.0, animations:{() -> Void in
