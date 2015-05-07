@@ -13,6 +13,10 @@ class VocabCheckerViewController:UIViewController,UITextViewDelegate{
     
     var textview:UITextView!
     var movebox:UILabel!
+    var handImageView:UIImageView!
+    
+    var centerX: CGFloat!
+    var centerY: CGFloat!
     
     override func viewDidLoad() {
         
@@ -38,18 +42,18 @@ class VocabCheckerViewController:UIViewController,UITextViewDelegate{
         let context = UIGraphicsGetCurrentContext()
         
         CGContextSetRGBStrokeColor(context, 0,0,0,1.0) // 線の色
-        let radiusL: CGFloat = self.view.bounds.width/2+30
-        let radiusS: CGFloat = self.view.bounds.width/2-10
-        let radiusM: CGFloat = self.view.bounds.width/2+10
+        let radiusL: CGFloat = self.view.bounds.width/2+40
+        let radiusS: CGFloat = self.view.bounds.width/2
+        let radiusM: CGFloat = self.view.bounds.width/2+20
         
-        let centerX = self.view.bounds.width/2
-        let centerY = radiusL + 20
+        self.centerX = self.view.bounds.width/2
+        self.centerY = radiusL + 50
         
         CGContextSetLineWidth(context, 0.5);   // 線の太さ
-        for j in 0...50 {
-            let i=j-(50-30)/2
-            CGContextMoveToPoint(context,centerX + radiusS*cos(CGFloat(M_PI/6 + M_PI / 45 * Double(i))), centerY - radiusS*sin(CGFloat(M_PI/6 + M_PI / 45 * Double(i))))
-            CGContextAddLineToPoint(context,centerX + radiusM*cos(CGFloat(M_PI/6 + M_PI / 45 * Double(i))), centerY - radiusM*sin(CGFloat(M_PI/6 + M_PI / 45 * Double(i))))
+        for j in 0...12 {
+            let i=j
+            CGContextMoveToPoint(context,centerX + radiusS*cos(CGFloat(M_PI/6 + M_PI / 18 * Double(i))), centerY - radiusS*sin(CGFloat(M_PI/6 + M_PI / 18 * Double(i))))
+            CGContextAddLineToPoint(context,centerX + radiusM*cos(CGFloat(M_PI/6 + M_PI / 18 * Double(i))), centerY - radiusM*sin(CGFloat(M_PI/6 + M_PI / 18 * Double(i))))
             CGContextStrokePath(context);  // 描画
         }
         
@@ -62,19 +66,29 @@ class VocabCheckerViewController:UIViewController,UITextViewDelegate{
         }
         let graduationImage = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
-        
         graduationImageView.image=graduationImage
-        
         self.view.addSubview(graduationImageView)
         
-        
-        movebox = UILabel(frame: CGRect(x: 0, y: self.view.bounds.height , width: radiusL*2, height: 5))
-        movebox.layer.position=CGPoint(x: centerX,y: centerY)
-        movebox.backgroundColor = UIColor.redColor()
-        movebox.textColor = UIColor.blueColor()
-        self.movebox.transform = CGAffineTransformMakeRotation(CGFloat(0.75 * M_PI * 10 / 9 ))
-        movebox.text = ""
-        self.view.addSubview(movebox)
+        //針を描画
+        self.handImageView = UIImageView(frame: CGRectMake(0, 0, 6,radiusL*2))
+        UIGraphicsBeginImageContextWithOptions(CGSizeMake(6,radiusL*2), false, 0)//描画開始
+        let path_triangle = UIBezierPath()
+        path_triangle.moveToPoint(CGPointMake(2, 0))
+        path_triangle.addLineToPoint(CGPointMake(0, radiusL))
+        path_triangle.addLineToPoint(CGPointMake(6, radiusL))
+        path_triangle.addLineToPoint(CGPointMake(4, 0))
+        path_triangle.addLineToPoint(CGPointMake(2, 0))
+        UIColor.redColor().setStroke()
+        UIColor.redColor().setFill()
+        path_triangle.stroke()
+        path_triangle.fill()
+        let handImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        self.handImageView.image=handImage
+        self.handImageView.layer.position = CGPointMake(self.centerX, self.centerY)
+        let angle:CGFloat = CGFloat(0.75 * M_PI * 10 / 9 - M_PI_2)
+        self.handImageView.transform = CGAffineTransformMakeRotation(angle)
+        self.view.addSubview(self.handImageView)
         
         
         textview = UITextView(frame: CGRect(x: 0, y: self.view.bounds.height/2, width: self.view.bounds.width, height: 40))
@@ -85,7 +99,6 @@ class VocabCheckerViewController:UIViewController,UITextViewDelegate{
         textview.returnKeyType = UIReturnKeyType.Done
         textview.font = UIFont.systemFontOfSize(CGFloat(20))
         self.view.addSubview(textview)
-        
         
     }
 
@@ -98,13 +111,10 @@ class VocabCheckerViewController:UIViewController,UITextViewDelegate{
             //println("change ttr")
             println(ModelManager.getInstance().getVocabCheckModel().getTtrInfo().getTTR())
             
-            let angle:CGFloat = CGFloat((ModelManager.getInstance().getVocabCheckModel().getTtrInfo().getTTR() - 0.25) * M_PI * 10 / 9 )
-            
+            let angle:CGFloat = CGFloat((ModelManager.getInstance().getVocabCheckModel().getTtrInfo().getTTR() - 0.25) * M_PI * 10 / 9 - M_PI_2)
             UIView.animateWithDuration(1.0, animations:{() -> Void in
-                
-                /*self.movebox.layer.bounds.size.width = self.view.bounds.width * CGFloat(ModelManager.getInstance().getVocabCheckModel().getTtrInfo().getTTR())
-                },*/
-                self.movebox.transform = CGAffineTransformMakeRotation(angle)
+                self.handImageView.layer.position = CGPointMake(self.centerX, self.centerY)
+                self.handImageView.transform = CGAffineTransformMakeRotation(angle)
                 },
                 completion:nil
             )

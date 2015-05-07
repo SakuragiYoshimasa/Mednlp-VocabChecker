@@ -22,8 +22,8 @@ class ResultViewController:UIViewController{
         scoreLabel.text = "Score:" + String(stringInterpolationSegment: ModelManager.getInstance().getVocabCheckModel().getTtrInfo().getTTR())
         self.view.addSubview(scoreLabel)
         
-        let startButton:UIButton = UIButton(frame: CGRect(x: 0, y: 0, width: self.view.bounds.width*3/4, height: 100))
-        startButton.titleLabel?.font = UIFont(name: "Helvetica-Bold",size: CGFloat(30))
+        let startButton:UIButton = UIButton(frame: CGRect(x: 0, y: 0, width: self.view.bounds.width*3/4, height: self.view.frame.width/3))
+        startButton.titleLabel?.font = UIFont(name: "Helvetica-Bold",size: CGFloat(self.view.frame.width/10))
         startButton.layer.position=CGPoint(x: self.view.frame.width/2, y: self.view.frame.height-100)
         startButton.setTitle("タイトルに戻る", forState: UIControlState.Highlighted)
         startButton.setTitleColor(ConstShared.keyColor, forState: UIControlState.Highlighted)

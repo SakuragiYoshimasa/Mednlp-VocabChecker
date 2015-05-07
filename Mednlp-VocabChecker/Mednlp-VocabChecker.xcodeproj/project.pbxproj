@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A476B3FE1AFB948500D3DD3C /* DrawGraphicApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = A476B3FD1AFB948500D3DD3C /* DrawGraphicApi.swift */; };
 		A4BCAB0B1AFB26B00051A5CD /* title.png in Resources */ = {isa = PBXBuildFile; fileRef = A4BCAB0A1AFB26B00051A5CD /* title.png */; };
 		A4BCAB0F1AFB2AF30051A5CD /* ConstShared.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4BCAB0E1AFB2AF30051A5CD /* ConstShared.swift */; };
 		A4BCAB111AFB2CD80051A5CD /* main.png in Resources */ = {isa = PBXBuildFile; fileRef = A4BCAB101AFB2CD80051A5CD /* main.png */; };
@@ -38,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A476B3FD1AFB948500D3DD3C /* DrawGraphicApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawGraphicApi.swift; sourceTree = "<group>"; };
 		A4BCAB0A1AFB26B00051A5CD /* title.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = title.png; sourceTree = "<group>"; };
 		A4BCAB0E1AFB2AF30051A5CD /* ConstShared.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstShared.swift; sourceTree = "<group>"; };
 		A4BCAB101AFB2CD80051A5CD /* main.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = main.png; sourceTree = "<group>"; };
@@ -176,6 +178,7 @@
 				FA0EF2041AD4C058007289E5 /* TypeTokenApi.swift */,
 				FA0EF2061AD4C06F007289E5 /* SendDataApi.swift */,
 				FA98C5371ADBAECE00EADB06 /* VoiceInputApi.swift */,
+				A476B3FD1AFB948500D3DD3C /* DrawGraphicApi.swift */,
 			);
 			name = Api;
 			sourceTree = "<group>";
@@ -298,6 +301,7 @@
 				FA0EF1D91AD4BE8D007289E5 /* AppDelegate.swift in Sources */,
 				FA0EF2051AD4C058007289E5 /* TypeTokenApi.swift in Sources */,
 				FA0EF1F91AD4BFD9007289E5 /* TitleViewController.swift in Sources */,
+				A476B3FE1AFB948500D3DD3C /* DrawGraphicApi.swift in Sources */,
 				FA0EF1FF1AD4C017007289E5 /* ModelManager.swift in Sources */,
 				FA0EF2091AD4C0B5007289E5 /* TtrTypeTokenEntity.swift in Sources */,
 				A4BCAB0F1AFB2AF30051A5CD /* ConstShared.swift in Sources */,
@@ -425,8 +429,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Mednlp-VocabChecker/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -435,8 +441,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Mednlp-VocabChecker/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
