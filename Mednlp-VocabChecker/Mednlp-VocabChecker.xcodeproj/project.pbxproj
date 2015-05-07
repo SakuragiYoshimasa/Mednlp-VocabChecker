@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A4BCAB0B1AFB26B00051A5CD /* title.png in Resources */ = {isa = PBXBuildFile; fileRef = A4BCAB0A1AFB26B00051A5CD /* title.png */; };
+		A4BCAB0F1AFB2AF30051A5CD /* ConstShared.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4BCAB0E1AFB2AF30051A5CD /* ConstShared.swift */; };
+		A4BCAB111AFB2CD80051A5CD /* main.png in Resources */ = {isa = PBXBuildFile; fileRef = A4BCAB101AFB2CD80051A5CD /* main.png */; };
 		FA0EF1D91AD4BE8D007289E5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0EF1D81AD4BE8D007289E5 /* AppDelegate.swift */; };
 		FA0EF1DE1AD4BE8D007289E5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA0EF1DC1AD4BE8D007289E5 /* Main.storyboard */; };
 		FA0EF1E01AD4BE8D007289E5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA0EF1DF1AD4BE8D007289E5 /* Images.xcassets */; };
@@ -35,6 +38,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A4BCAB0A1AFB26B00051A5CD /* title.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = title.png; sourceTree = "<group>"; };
+		A4BCAB0E1AFB2AF30051A5CD /* ConstShared.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstShared.swift; sourceTree = "<group>"; };
+		A4BCAB101AFB2CD80051A5CD /* main.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = main.png; sourceTree = "<group>"; };
 		FA0EF1D31AD4BE8D007289E5 /* Mednlp-VocabChecker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mednlp-VocabChecker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA0EF1D71AD4BE8D007289E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA0EF1D81AD4BE8D007289E5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -74,6 +80,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A4BCAB091AFB269B0051A5CD /* res */ = {
+			isa = PBXGroup;
+			children = (
+				A4BCAB101AFB2CD80051A5CD /* main.png */,
+				A4BCAB0A1AFB26B00051A5CD /* title.png */,
+			);
+			name = res;
+			sourceTree = "<group>";
+		};
 		FA0EF1CA1AD4BE8D007289E5 = {
 			isa = PBXGroup;
 			children = (
@@ -95,6 +110,8 @@
 		FA0EF1D51AD4BE8D007289E5 /* Mednlp-VocabChecker */ = {
 			isa = PBXGroup;
 			children = (
+				A4BCAB0E1AFB2AF30051A5CD /* ConstShared.swift */,
+				A4BCAB091AFB269B0051A5CD /* res */,
 				FA0EF1D81AD4BE8D007289E5 /* AppDelegate.swift */,
 				FA0EF20B1AD4C0DB007289E5 /* Model */,
 				FA0EF20A1AD4C0BF007289E5 /* ViewController */,
@@ -252,7 +269,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA0EF1DE1AD4BE8D007289E5 /* Main.storyboard in Resources */,
+				A4BCAB111AFB2CD80051A5CD /* main.png in Resources */,
 				FA0EF1E31AD4BE8D007289E5 /* LaunchScreen.xib in Resources */,
+				A4BCAB0B1AFB26B00051A5CD /* title.png in Resources */,
 				FA0EF1E01AD4BE8D007289E5 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -281,6 +300,7 @@
 				FA0EF1F91AD4BFD9007289E5 /* TitleViewController.swift in Sources */,
 				FA0EF1FF1AD4C017007289E5 /* ModelManager.swift in Sources */,
 				FA0EF2091AD4C0B5007289E5 /* TtrTypeTokenEntity.swift in Sources */,
+				A4BCAB0F1AFB2AF30051A5CD /* ConstShared.swift in Sources */,
 				FA0EF2011AD4C029007289E5 /* VocabCheckModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

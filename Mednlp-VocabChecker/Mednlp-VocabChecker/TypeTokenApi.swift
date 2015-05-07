@@ -22,7 +22,6 @@ class TypeToken {
     
     static func getTypeToken(testString :String!)->[Int]{
         
-        
         let tagger = NSLinguisticTagger(tagSchemes: NSLinguisticTagger.availableTagSchemesForLanguage("ja"),options: 0)
         
 

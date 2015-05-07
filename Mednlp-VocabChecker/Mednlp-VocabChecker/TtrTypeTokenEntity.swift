@@ -16,7 +16,7 @@ class TtrTypeTokenEntity :NSObject{
     
     
     override init(){
-        self.ttr = 0
+        self.ttr = 1.0
         self.type = 0
         self.token = 0
     }
@@ -25,7 +25,11 @@ class TtrTypeTokenEntity :NSObject{
         
         self.type = type
         self.token = token
-        self.ttr = type/token
+        if token==0 {
+            self.ttr=1.0
+        }else{
+            self.ttr = type/token
+        }
     
     }
     

@@ -14,23 +14,45 @@ class TitleViewController: UIViewController {
     
     override func viewDidLoad() {
         
-        self.view.backgroundColor = UIColor.whiteColor()
+        self.view.backgroundColor = ConstShared.keyColor
         
-        let titleLabel:UILabel = UILabel(frame: CGRect(x: 0, y: 0, width: 100, height: 100));
-        titleLabel.text = "Title"
-        self.view.addSubview(titleLabel)
+        let titleImageView:UIImageView = UIImageView(frame: self.view.bounds)
+        titleImageView.image = UIImage(named: "title.png")
+        self.view.addSubview(titleImageView)
         
-        let startButton:UIButton = UIButton(frame: CGRect(x: 0, y: 100, width: 100, height: 100))
-        startButton.setTitle("Start", forState: UIControlState.Highlighted)
-        startButton.addTarget(self, action: "StartVocabCheck", forControlEvents: UIControlEvents.TouchUpInside)
-        startButton.backgroundColor = UIColor.blackColor()
+        let startButton:UIButton = UIButton(frame: CGRect(x: 0, y: 0, width: self.view.bounds.width*3/4, height: 100))
+        startButton.titleLabel?.font = UIFont(name: "Helvetica-Bold",size: CGFloat(30))
+        startButton.layer.position=CGPoint(x: self.view.frame.width/2, y: self.view.frame.height-200)
+        startButton.setTitle("診断を始める", forState: UIControlState.Highlighted)
+        startButton.setTitleColor(ConstShared.keyColor, forState: UIControlState.Highlighted)
+        startButton.setTitle("診断を始める", forState: UIControlState.Normal)
+        startButton.setTitleColor(UIColor.orangeColor(), forState: UIControlState.Normal)
+        startButton.addTarget(self, action: "StartVocabCheck:", forControlEvents: UIControlEvents.TouchUpInside)
+        startButton.addTarget(self, action: "PressButton:", forControlEvents: UIControlEvents.TouchDown)
+        startButton.addTarget(self, action: "ReleaseButton:", forControlEvents: UIControlEvents.TouchDragOutside)
+        startButton.addTarget(self, action: "PressButton:", forControlEvents: UIControlEvents.TouchDragInside)
+        
+        startButton.layer.masksToBounds = true
+        startButton.layer.cornerRadius = 20.0
+        
+        startButton.backgroundColor = UIColor.clearColor()
+        startButton.layer.borderColor = UIColor.orangeColor().CGColor
+        startButton.layer.borderWidth = 1.0
         self.view.addSubview(startButton)
         
     }
     
-    func StartVocabCheck(){
-        
+    func ReleaseButton(sender: UIButton!){
+        sender.backgroundColor = UIColor.clearColor()
+    }
+    
+    func PressButton(sender: UIButton!){
+        sender.backgroundColor = UIColor.orangeColor()
+    }
+    
+    func StartVocabCheck(sender: UIButton!){
+        sender.backgroundColor = UIColor.clearColor()
         let vocabCheckViewController:VocabCheckerViewController = VocabCheckerViewController()
-        self.presentViewController(vocabCheckViewController, animated: false, completion: nil)
+        self.presentViewController(vocabCheckViewController, animated: true, completion: nil)
     }
 }
