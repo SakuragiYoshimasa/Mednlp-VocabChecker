@@ -15,7 +15,6 @@ class ResultViewController:UIViewController{
         super.viewDidLoad()
         
         self.view.backgroundColor = ConstShared.keyColor
-        
 
         let scoreLabel:UILabel = UILabel(frame: CGRect(x: 0, y: 0, width: self.view.bounds.width, height: 100))
         scoreLabel.textColor = UIColor.blackColor()

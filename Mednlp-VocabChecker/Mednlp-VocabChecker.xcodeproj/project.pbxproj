@@ -87,6 +87,7 @@
 		A4BCAB091AFB269B0051A5CD /* res */ = {
 			isa = PBXGroup;
 			children = (
+				A4BCAB0E1AFB2AF30051A5CD /* ConstShared.swift */,
 				A476B3FF1AFBB18000D3DD3C /* launch.png */,
 				A4BCAB101AFB2CD80051A5CD /* main.png */,
 				A4BCAB0A1AFB26B00051A5CD /* title.png */,
@@ -115,13 +116,12 @@
 		FA0EF1D51AD4BE8D007289E5 /* Mednlp-VocabChecker */ = {
 			isa = PBXGroup;
 			children = (
-				A4BCAB0E1AFB2AF30051A5CD /* ConstShared.swift */,
-				A4BCAB091AFB269B0051A5CD /* res */,
 				FA0EF1D81AD4BE8D007289E5 /* AppDelegate.swift */,
 				FA0EF20B1AD4C0DB007289E5 /* Model */,
 				FA0EF20A1AD4C0BF007289E5 /* ViewController */,
 				FA0EF20C1AD4C0ED007289E5 /* Api */,
 				FA0EF20D1AD4C10A007289E5 /* Entity */,
+				A4BCAB091AFB269B0051A5CD /* res */,
 				FA0EF1DC1AD4BE8D007289E5 /* Main.storyboard */,
 				FA0EF1DF1AD4BE8D007289E5 /* Images.xcassets */,
 				FA0EF1E11AD4BE8D007289E5 /* LaunchScreen.xib */,
@@ -435,7 +435,7 @@
 				INFOPLIST_FILE = "Mednlp-VocabChecker/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "コトバカリ";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -447,7 +447,7 @@
 				INFOPLIST_FILE = "Mednlp-VocabChecker/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "コトバカリ";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
