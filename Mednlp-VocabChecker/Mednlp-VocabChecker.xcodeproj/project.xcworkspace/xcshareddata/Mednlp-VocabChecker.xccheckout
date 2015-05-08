@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>CADD1CFE-FEFC-4371-8A1C-EA2DB45F1093</string>
 	<key>IDESourceControlProjectName</key>
-	<string>project</string>
+	<string>Mednlp-VocabChecker</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>59AA9E7763F2BBB9810AE472CC51B3AC55767C04</key>
 		<string>https://github.com/SakuragiYoshimasa/Mednlp-VocabChecker.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>Mednlp-VocabChecker/Mednlp-VocabChecker.xcodeproj/project.xcworkspace</string>
+	<string>Mednlp-VocabChecker/Mednlp-VocabChecker.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>59AA9E7763F2BBB9810AE472CC51B3AC55767C04</key>

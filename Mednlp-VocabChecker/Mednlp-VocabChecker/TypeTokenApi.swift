@@ -22,11 +22,9 @@ class TypeToken {
     
     static func getTypeToken(testString :String!)->[Int]{
         
-        
         let tagger = NSLinguisticTagger(tagSchemes: NSLinguisticTagger.availableTagSchemesForLanguage("ja"),options: 0)
         
-        //var token: Int!
-        //var type: Int!
+
         var types: [String]=[""]
         var tokens:Int = 0
         let options: NSLinguisticTaggerOptions = .OmitWhitespace | .OmitPunctuation | .JoinNames
@@ -39,16 +37,31 @@ class TypeToken {
                 types.append(tokencell)
             }
         }
-        //token=types.count
-        //token=tokens
     
-        return [types.count,tokens]
+        return [types.count - 1,tokens]
+    }
+
     
+    
+    //暫定的なvocabCheck
+    /* var splited = input.componentsSeparatedByString(" ")
+    println(String(splited.count))
+    var type = 0
+    var flag = 0
+    for i in 0..<splited.count {
+    
+    flag = 0
+    
+    for j in (i+1)..<splited.count {
+    if(splited[i] == splited[j]){
+    flag++
+    break
     }
-   /* func getType()->Int{
-        return self.type
     }
-    func getToken()->Int{
-        return self.token
+    if(flag == 0){
+    type++
+    }
     }*/
+    
+    //ttrInfo.SetTTR(Double(type), token: Double(splited.count))
 }

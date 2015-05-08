@@ -16,7 +16,7 @@ class TtrTypeTokenEntity :NSObject{
     
     
     override init(){
-        self.ttr = 0
+        self.ttr = 1.0
         self.type = 0
         self.token = 0
     }
@@ -25,13 +25,32 @@ class TtrTypeTokenEntity :NSObject{
         
         self.type = type
         self.token = token
-        self.ttr = type/token
+        if token==0 {
+            self.ttr=1.0
+        }else{
+            self.ttr = type/token
+        }
     
+    }
+    
+    func getTTRResult() -> String {
+        if ttr > 0.9 {
+            return "素晴らしい語彙力です"
+        }else if ttr > 0.6 {
+            return "平均的です"
+        }else{
+            return "語彙不足の傾向があります"
+        }
     }
     
     func getTTR() -> Double {
         
         return ttr
+        
+    }
+    func getTTRNormalized() -> NSString {
+        
+        return NSString(format: "%.2f", ttr)
         
     }
     
