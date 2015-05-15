@@ -60,8 +60,5 @@ class TtrTypeTokenEntity :NSObject{
     
     func getTOKEN() -> Double {
         return self.token
-    }
-    
-    
-    
+    }    
 }

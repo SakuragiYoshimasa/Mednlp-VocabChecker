@@ -158,5 +158,9 @@ class VocabCheckerViewController:UIViewController,UITextViewDelegate{
     func textViewDidEndEditing(textView: UITextView) {
         println("textviewDidEndEditing:" + textview.text)
     }
+    
+    override func viewWillDisappear(animated: Bool) {
+       // ModelManager.getInstance().getVocabCheckModel().removeObserver(self, forKeyPath: "ttr");
+    }
 
 }
