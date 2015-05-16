@@ -12,6 +12,7 @@
 		A4BCAB0B1AFB26B00051A5CD /* title.png in Resources */ = {isa = PBXBuildFile; fileRef = A4BCAB0A1AFB26B00051A5CD /* title.png */; };
 		A4BCAB0F1AFB2AF30051A5CD /* ConstShared.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4BCAB0E1AFB2AF30051A5CD /* ConstShared.swift */; };
 		A4BCAB111AFB2CD80051A5CD /* main.png in Resources */ = {isa = PBXBuildFile; fileRef = A4BCAB101AFB2CD80051A5CD /* main.png */; };
+		A4F66D271B06E0DA002CCFA3 /* PAVS_v2.txt in Resources */ = {isa = PBXBuildFile; fileRef = A4F66D261B06E0DA002CCFA3 /* PAVS_v2.txt */; };
 		FA0EF1D91AD4BE8D007289E5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0EF1D81AD4BE8D007289E5 /* AppDelegate.swift */; };
 		FA0EF1DE1AD4BE8D007289E5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA0EF1DC1AD4BE8D007289E5 /* Main.storyboard */; };
 		FA0EF1E01AD4BE8D007289E5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA0EF1DF1AD4BE8D007289E5 /* Images.xcassets */; };
@@ -45,6 +46,7 @@
 		A4BCAB0A1AFB26B00051A5CD /* title.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = title.png; sourceTree = "<group>"; };
 		A4BCAB0E1AFB2AF30051A5CD /* ConstShared.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstShared.swift; sourceTree = "<group>"; };
 		A4BCAB101AFB2CD80051A5CD /* main.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = main.png; sourceTree = "<group>"; };
+		A4F66D261B06E0DA002CCFA3 /* PAVS_v2.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = PAVS_v2.txt; sourceTree = "<group>"; };
 		FA0EF1D31AD4BE8D007289E5 /* コトバカリ.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "コトバカリ.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA0EF1D71AD4BE8D007289E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA0EF1D81AD4BE8D007289E5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -87,6 +89,7 @@
 		A4BCAB091AFB269B0051A5CD /* res */ = {
 			isa = PBXGroup;
 			children = (
+				A4F66D261B06E0DA002CCFA3 /* PAVS_v2.txt */,
 				A4BCAB0E1AFB2AF30051A5CD /* ConstShared.swift */,
 				A476B3FF1AFBB18000D3DD3C /* launch.png */,
 				A4BCAB101AFB2CD80051A5CD /* main.png */,
@@ -243,6 +246,7 @@
 				TargetAttributes = {
 					FA0EF1D21AD4BE8D007289E5 = {
 						CreatedOnToolsVersion = 6.2;
+						DevelopmentTeam = V723YSJ67H;
 					};
 					FA0EF1E71AD4BE8D007289E5 = {
 						CreatedOnToolsVersion = 6.2;
@@ -280,6 +284,7 @@
 				FA0EF1E31AD4BE8D007289E5 /* LaunchScreen.xib in Resources */,
 				A4BCAB0B1AFB26B00051A5CD /* title.png in Resources */,
 				FA0EF1E01AD4BE8D007289E5 /* Images.xcassets in Resources */,
+				A4F66D271B06E0DA002CCFA3 /* PAVS_v2.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -434,11 +439,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Mednlp-VocabChecker/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				New_Setting = "";
 				PRODUCT_NAME = "コトバカリ";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -447,11 +455,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Mednlp-VocabChecker/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				New_Setting = "";
 				PRODUCT_NAME = "コトバカリ";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
