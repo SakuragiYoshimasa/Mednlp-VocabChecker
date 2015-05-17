@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "FA0EF1D21AD4BE8D007289E5"
-               BuildableName = "Mednlp-VocabChecker.app"
+               BuildableName = "&#x30b3;&#x30c8;&#x30cf;&#x3099;&#x30ab;&#x30ea;.app"
                BlueprintName = "Mednlp-VocabChecker"
                ReferencedContainer = "container:Mednlp-VocabChecker.xcodeproj">
             </BuildableReference>
@@ -57,7 +57,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "FA0EF1D21AD4BE8D007289E5"
-            BuildableName = "Mednlp-VocabChecker.app"
+            BuildableName = "&#x30b3;&#x30c8;&#x30cf;&#x3099;&#x30ab;&#x30ea;.app"
             BlueprintName = "Mednlp-VocabChecker"
             ReferencedContainer = "container:Mednlp-VocabChecker.xcodeproj">
          </BuildableReference>
@@ -77,7 +77,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "FA0EF1D21AD4BE8D007289E5"
-            BuildableName = "Mednlp-VocabChecker.app"
+            BuildableName = "&#x30b3;&#x30c8;&#x30cf;&#x3099;&#x30ab;&#x30ea;.app"
             BlueprintName = "Mednlp-VocabChecker"
             ReferencedContainer = "container:Mednlp-VocabChecker.xcodeproj">
          </BuildableReference>
@@ -96,7 +96,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "FA0EF1D21AD4BE8D007289E5"
-            BuildableName = "Mednlp-VocabChecker.app"
+            BuildableName = "&#x30b3;&#x30c8;&#x30cf;&#x3099;&#x30ab;&#x30ea;.app"
             BlueprintName = "Mednlp-VocabChecker"
             ReferencedContainer = "container:Mednlp-VocabChecker.xcodeproj">
          </BuildableReference>

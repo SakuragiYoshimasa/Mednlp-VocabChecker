@@ -1,0 +1,4 @@
+version: "Apple Swift version 1.2 (swiftlang-602.0.49.3 clang-clang-602.0.49)"
+options: "9599fd6aea5dfe427ca903565641c49c"
+inputs: 
+- "/Users/tomooyamaguchi/Desktop/MedNLP/Mednlp-VocabChecker/Mednlp-VocabChecker/Mednlp-VocabCheckerTests/Mednlp_VocabCheckerTests.swift"
